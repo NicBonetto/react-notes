@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "babel-node index.js",
     "bundle": "browerify -t babelify main.js > bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
