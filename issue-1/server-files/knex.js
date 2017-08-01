@@ -8,7 +8,7 @@ const knex = Knex({
 export function getNotes() {
   const query = knex
     .table('notes')
-    .select('note_content')
+    .select('note_content', 'id')
     .orderBy('id', 'asc')
 
   return query
