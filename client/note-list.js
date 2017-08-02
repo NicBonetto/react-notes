@@ -4,6 +4,15 @@ export default class NoteList extends React.Component {
   constructor() {
     super()
     this.state = {notes: []}
+    this.deleteNote = this.deleteNote.bind(this)
+  }
+
+  fetchData() {
+    fetch('/notes')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({notes: data})
+      })
   }
 
   deleteNote(e) {
@@ -11,6 +20,7 @@ export default class NoteList extends React.Component {
     fetch('/notes/' + id, {
       method: 'DELETE',
     })
+      .then(() => this.fetchData())
   }
 
   componentDidMount() {
