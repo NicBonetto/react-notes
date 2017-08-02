@@ -1,6 +1,6 @@
 import express from 'express'
 import bodyParser from 'body-parser'
-import { getNotes, postNote } from './knex'
+import { getNotes, postNote, deleteNote } from './knex'
 
 const app = express()
 
@@ -18,6 +18,11 @@ app.get('/notes', (req, res) => {
 app.post('/create-note', (req, res) => {
   postNote(req.body.note)
     .then(() => res.sendStatus(201))
+})
+
+app.delete('/delete-note', (req, res) => {
+  deleteNote(req.body.id)
+    .then(() => res.sendStatus(200))
 })
 
 app.listen(3000)
