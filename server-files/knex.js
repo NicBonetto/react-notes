@@ -24,6 +24,7 @@ export function postNote(newNote) {
 
 export function deleteNote(id) {
   const query = knex
+    .table('notes')
     .where('id', '=', id)
     .del()
 

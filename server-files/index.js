@@ -20,8 +20,8 @@ app.post('/create-note', (req, res) => {
     .then(() => res.sendStatus(201))
 })
 
-app.delete('/delete-note', (req, res) => {
-  deleteNote(req.body.id)
+app.delete('/notes/:id', (req, res) => {
+  deleteNote(req.params.id)
     .then(() => res.sendStatus(200))
 })
 
