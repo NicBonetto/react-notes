@@ -1,0 +1,35 @@
+{
+  "name": "react-notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:client": "watchify client/main.js -v -o server-files/public/bundle.js -t babelify",
+    "watch:server": "nodemon server-files/index.js",
+    "start": "babel-node server-files/index.js",
+    "bundle": "browerify -t babelify client/main.js > server-files/public/bundle.js",
+    "all": "run-p watch:client start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "knex": "^0.13.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babelify": "^7.3.0",
+    "body-parser": "^1.17.2",
+    "browserify": "^14.4.0",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^4.0.2",
+    "pg": "^7.0.2",
+    "watchify": "^3.9.0"
+  }
+}
