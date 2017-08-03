@@ -21,3 +21,12 @@ export function postNote(newNote) {
 
   return query
 }
+
+export function deleteNote(id) {
+  const query = knex
+    .table('notes')
+    .where('id', '=', id)
+    .del()
+
+  return query
+}

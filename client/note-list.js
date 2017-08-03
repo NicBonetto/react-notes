@@ -4,6 +4,23 @@ export default class NoteList extends React.Component {
   constructor() {
     super()
     this.state = {notes: []}
+    this.deleteNote = this.deleteNote.bind(this)
+  }
+
+  fetchData() {
+    fetch('/notes')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({notes: data})
+      })
+  }
+
+  deleteNote(e) {
+    const id = e.target.id
+    fetch('/notes/' + id, {
+      method: 'DELETE',
+    })
+      .then(() => this.fetchData())
   }
 
   componentDidMount() {
@@ -18,6 +35,7 @@ export default class NoteList extends React.Component {
     const notes = this.state.notes.map(element => {
       return (
         <div className="panel panel-warning" key={element.id}>
+          <span onClick={this.deleteNote} id={element.id} className="glyphicon glyphicon-remove pull-right"></span>
           <div className="panel-heading">
             <h4 className="panel-title">Note #{element.id}</h4>
           </div>
@@ -27,7 +45,7 @@ export default class NoteList extends React.Component {
     })
 
     return (
-      <div className="panel panel-warning">
+      <div className="panels">
         {notes}
       </div>
     )
