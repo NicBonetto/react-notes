@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "db:make": "pg-bump create",
+    "db:rebuild": "pg-bump down && pg-bump up",
+    "db:down": "pg-bump down",
+    "db:up": "pg-bump up",
     "test": "mocha test/ -w -R nyan",
     "watch:client": "watchify client/main.js -v -o server-files/public/bundle.js -t babelify",
     "watch:server": "nodemon server-files/index.js",
