@@ -25,4 +25,4 @@ app.delete('/notes/:id', (req, res) => {
     .then(() => res.sendStatus(200))
 })
 
-app.listen(3000)
+app.listen(process.env.PORT)
