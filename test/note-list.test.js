@@ -3,11 +3,12 @@ const { expect } = require('chai')
 const request = require('request')
 
 describe('index.js', () => {
-  describe('app.get()', () => {
-    it('Uses an Express GET route to retrieve a list of notes from the database', () => {
-      request('http://localhost:3000/notes', (err, res, body) => {
+  describe('GET /notes', () => {
+    it('Uses an Express GET route to retrieve a list of notes from the database', done => {
+      request('http://localhost:3000/notes', { json: true }, (err, res, body) => {
         if (err) console.log(err)
-        expect(JSON.parse(body)).to.be.an.instanceof(Array)
+        expect(body).to.be.an('array').with.length.above(0)
+        done()
       })
     })
   })
