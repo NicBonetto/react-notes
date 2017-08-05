@@ -1,8 +1,9 @@
+require('dotenv').config()
 import Knex from 'knex'
 
 const knex = Knex({
   dialect: 'pg',
-  connection: 'postegres://localhost:5432/notes'
+  connection: process.env.DATABASE_URL
 })
 
 export function getNotes() {

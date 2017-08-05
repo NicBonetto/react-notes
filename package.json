@@ -2,12 +2,16 @@
   "name": "react-notes",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server-files/index.js",
   "scripts": {
+    "db:make": "pg-bump create",
+    "db:rebuild": "pg-bump down && pg-bump up",
+    "db:down": "pg-bump down",
+    "db:up": "pg-bump up",
     "test": "mocha test/ -w -R nyan",
     "watch:client": "watchify client/main.js -v -o server-files/public/bundle.js -t babelify",
     "watch:server": "nodemon server-files/index.js",
-    "start": "babel-node server-files/index.js",
+    "start": "babel-node .",
     "bundle": "browerify -t babelify client/main.js > server-files/public/bundle.js",
     "all": "run-p watch:client start"
   },
@@ -15,6 +19,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "express": "^4.15.3",
     "knex": "^0.13.0",
     "react": "^15.6.1",
@@ -32,6 +37,7 @@
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.2",
     "pg": "^7.0.2",
+    "pg-bump": "^1.0.3",
     "request": "^2.81.0",
     "watchify": "^3.9.0"
   }
