@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "engines": {
     "node": "8.2.1"
-  }
-  "description": "",
+  },
+  "description": "An app for JavaScript developers who want to take notes on what they've learned.",
   "main": "server-files/index.js",
   "scripts": {
     "heroku-postbuild": "npm run db:up",
