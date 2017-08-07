@@ -17,7 +17,7 @@
     "watch:client": "watchify client/main.js -v -o server-files/public/bundle.js -t babelify",
     "watch:server": "nodemon server-files/index.js",
     "start": "babel-node .",
-    "bundle": "browerify -t babelify client/main.js > server-files/public/bundle.js",
+    "bundle": "browserify -t babelify client/main.js > server-files/public/bundle.js",
     "all": "run-p watch:client start"
   },
   "keywords": [],
