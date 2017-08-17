@@ -7,7 +7,7 @@ A web app for JavaScript developers who want to save notes about what they've le
 # Getting Started
 This application uses git and node, so make sure those are already installed. Then, follow these prompts: 
 ```
-$ git clone https://github.com/react-notes
+$ git clone https://github.com/NicBonetto/react-notes.git
 $ cd react-notes
 $ npm install
 $ npm run all
