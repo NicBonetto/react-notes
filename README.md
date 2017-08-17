@@ -25,4 +25,6 @@ React-Notes was made with:
 + React
 + Node
 + Postgre
++ Mocha
++ Chai
 + Heroku
