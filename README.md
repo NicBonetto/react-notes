@@ -1,6 +1,6 @@
 # react-notes
 
-__Live Demo:__https://notes-made-with-react.herokuapp.com/
+__Live Demo:__ https://notes-made-with-react.herokuapp.com/
 
 A web app for JavaScript developers who want to save notes about what they've learned.
 
