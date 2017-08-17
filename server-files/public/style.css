@@ -7,3 +7,16 @@
 #notes {
   margin-top: 2.3%;
 }
+
+.btn {
+  margin-top: 3%;
+}
+
+li {
+  list-style: none;
+}
+
+.panels {
+  overflow: auto;
+  height: 80vh;
+}
