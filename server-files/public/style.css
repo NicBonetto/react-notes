@@ -1,0 +1,22 @@
+#jumbo {
+  background-image: url(https://ak2.picdn.net/shutterstock/videos/19537192/thumb/1.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+#notes {
+  margin-top: 2.3%;
+}
+
+.btn {
+  margin-top: 3%;
+}
+
+li {
+  list-style: none;
+}
+
+.panels {
+  overflow: auto;
+  height: 80vh;
+}
