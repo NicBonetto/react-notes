@@ -4,6 +4,8 @@ __Live Demo:__ https://notes-made-with-react.herokuapp.com/
 
 A web app for JavaScript developers who want to save notes about what they've learned.
 
+![](https://user-images.githubusercontent.com/28014739/29391334-7a43bd4a-82ab-11e7-8500-6aae76c81a26.png)
+
 # Getting Started
 This application uses git and node, so make sure those are already installed. Then, follow these prompts: 
 ```
