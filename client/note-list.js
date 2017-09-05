@@ -34,12 +34,14 @@ export default class NoteList extends React.Component {
   render() {
     const notes = this.state.notes.map(element => {
       return (
-        <div className="panel panel-warning" key={element.id}>
-          <span onClick={this.deleteNote} id={element.id} className="glyphicon glyphicon-remove pull-right"></span>
-          <div className="panel-heading">
-            <h4 className="panel-title">Note #{element.id}</h4>
+        <div className="card yellow lighten-2" key={element.id}>
+          <div className="card-content">
+            <span onClick={this.deleteNote} id={element.id} className="fa fa-times right"></span>
+            <div className="card-title">
+              <h4 className="panel-title">Note #{element.id}</h4>
+            </div>
+            <div className="panel-body">{element.note_content}</div>
           </div>
-          <div className="panel-body">{element.note_content}</div>
         </div>
       )
     })
