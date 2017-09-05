@@ -1,0 +1,4 @@
+.env
+package-lock.json
+server-files/public/bundle.js
+node_modules

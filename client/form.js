@@ -24,7 +24,7 @@ export default class Form extends React.Component {
             <label>Add a Note:</label>
             <textarea className="form-control" name="note" rows="5"></textarea>
           </div>
-          <button ref="textarea" className="btn btn-primary" type="submit">Submit</button>
+          <button ref="textarea" className="btn waves-effect" type="submit">Submit</button>
         </div>
       </form>
     )
