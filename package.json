@@ -18,7 +18,9 @@
     "watch:server": "nodemon server-files/index.js",
     "start": "babel-node .",
     "bundle": "browserify -t babelify client/main.js > server-files/public/bundle.js",
-    "all": "run-p watch:client start"
+    "all": "run-p watch:client start",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [],
   "author": "",
@@ -28,7 +30,8 @@
     "express": "^4.15.3",
     "knex": "^0.13.0",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -45,5 +48,6 @@
     "pg-bump": "^1.0.3",
     "request": "^2.81.0",
     "watchify": "^3.9.0"
-  }
+  },
+  "snyk": true
 }
